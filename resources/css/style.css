@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html {
+    background-color: #F9F7F7;
+    color: #000000;
+    font-family: 'PT Serif', garamond,serif;
+    font-size: 20px;
+    height: 100vh;
+    text-rendering:optimizeLegibility;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.chinese {
+    font-family: Noto Sans CJK SC, SimSun;
+    font-weight: 400;
+    word-break: keep-all}
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url(img/baru.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.links {
+    position: absolute;
+    max-width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center
+}
+h1 {
+    font-weight: 300;
+    color: #f9f7f7;
+}
+.btn
+{
+    text-decoration:none;
+    font-size:130%;
+    color:#f9f7f7;
+}
+.btn:link, 
+.btn:visited,input[type=submit]
+{
+
+    font-weight: 200;
+}
+
+.btn:hover,
+.btn:active
+{
+    font-weight:800;
+}
