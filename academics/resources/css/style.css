@@ -7,7 +7,7 @@
 }
 .chinese {
     font-family: Noto Sans CJK SC, SimSun;
-    font-weight: 400;
+    font-weight: 300;
     word-break: keep-all}
 .clearfix:after {
     content: "";
@@ -30,6 +30,14 @@ body {
     font-size:90%;
 }
 
+a {
+/*    text-decoration: none;*/
+    color: #112d4e;
+}
+.resume {
+    color:indianred;
+    text-decoration: none;
+}
 /* Others*/
 h1,h2 {
     color:#3f72af;
@@ -38,6 +46,7 @@ h1,h2 {
 }
 h1 {    font-size: 48px;font-weight:300; margin-bottom: 20px;}
 h2 {    font-size: 32px;margin-bottom: 10px;}
+h3 {    font-size: 20px;margin-bottom: 10px;}
 
 figure {
     display: inline-block;
@@ -104,20 +113,31 @@ ul {
     width: 95%;
 }
 ul li {
-    background-color: #f4f4f3;
+/*    background-color: #f4f4f3;*/
     width: 100%;
 }
-
+.spec {
+    background-color: #f4f4f3;
+}
 ul li a.active{
     background: #3f72af;
     min-width: 100%;
     color:#fff
 }
 ul li a.rest{
-    color: #112d4e;
-    
+    color: #112d4e;    
     
 }
+
+.list,.description {
+    font-size: 85%;
+    background-color: #F9F7F7;
+    margin-bottom: 24px;
+}
+.list {
+    line-height:130%;
+}
+
 .teaser {
     line-height: 120%;
     background-color: #f4f4f3;

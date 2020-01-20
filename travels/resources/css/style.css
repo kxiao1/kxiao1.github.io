@@ -7,7 +7,7 @@
 }
 .chinese {
     font-family: Noto Sans CJK SC, SimSun;
-    font-weight: 400;
+    font-weight: 300;
     word-break: keep-all}
 .clearfix:after {
     content: "";
@@ -39,7 +39,7 @@ h1,h2 {
 }
 h1 {    font-size: 48px;font-weight:300; margin-bottom: 20px;}
 h2 {    font-size: 32px;margin-bottom: 10px;}
-
+p {margin-bottom: 0;}
 figure {
     display: inline-block;
     margin-left: 0px;
@@ -133,7 +133,6 @@ ul li a.rest{
     padding-top: 20px;
     margin: 0 auto;
     min-width: 100%;
-    min-height: 3vh;
     text-align:center;
     line-height: 150%;
 }
