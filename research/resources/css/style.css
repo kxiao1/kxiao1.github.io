@@ -7,7 +7,7 @@
 }
 .chinese {
     font-family: Noto Sans CJK SC, SimSun;
-    font-weight: 400;
+    font-weight: 300;
     word-break: keep-all}
 .clearfix:after {
     content: "";
