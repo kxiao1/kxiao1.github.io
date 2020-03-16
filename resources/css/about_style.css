@@ -29,7 +29,10 @@ body {
     text-decoration: none;
     font-size:90%;
 }
-
+a {
+    /*    text-decoration: none;*/
+        color: #112d4e;
+}
 /* Others*/
 h1,h2 {
     color:#3f72af;
