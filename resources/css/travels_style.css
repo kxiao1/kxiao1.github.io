@@ -43,7 +43,7 @@ p {margin-bottom: 0;}
 figure {
     display: inline-block;
     margin-left: 0px;
-    margin-bottom: 10px; 
+    margin-bottom: 20px;
 }
 figure figcaption { 
     text-align: left; 
@@ -116,8 +116,13 @@ ul li a.active{
 }
 ul li a.rest{
     color: #112d4e;
-    
-    
+}
+
+button {
+    margin-bottom: 20px;
+}
+.row {
+    margin-bottom: 100px;
 }
 .teaser {
     /* line-height: 120%; */

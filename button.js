@@ -6,12 +6,12 @@ for (let i = 0; i < links.length; i++) {
   oText[i] = links[i].style.color
 }
 for (let i = 0; i < links.length; i++) {
-  links[i].onmouseover = function(e) {
+  links[i].addEventListener("mouseover",function(e) {
     e.target.style.backgroundColor = "#000000";
     e.target.style.color = "#f3f3f4";
-  }
-  links[i].onmouseout = function(e) {
+  },false);
+  links[i].addEventListener("mouseout",function(e) {
     e.target.style.backgroundColor = oColor[i];
     e.target.style.color = oText[i];
-  }
+  },false);
 }
