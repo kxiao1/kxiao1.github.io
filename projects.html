@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>kxiao - projects</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/projects_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet"> 
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left">
+                <h1>Research</h1>
+                <p class="date"><em>Last modified: May 21, 2020</em></p>
+                <h2>Summer 2019 Research</h2>
+                    <p class="main-text">         
+                        In June and July 2019, my team of four conducted an interesting theoretical study on FOREX options in a perpetual-time setting. With typical, finite-time American call options, for instance, one will not exercise them early when the prevailing domestic interest rate is positive. But in the FOREX case, not exercising means losing out on the quote currency's interest rate. How then to proceed? We isolated the effect of time to ask how one would optimally exercise perpetual FOREX options - the exercise threshold would be some "stock price" (to be precise, some exchange rate) that depends only on the domestic and foreign interest rates, as well as market volatility. Using mathematical reasoning and numerical simulation, we obtained various results under different market assumptions. Please find a working paper on the topic below:
+                    </p>
+                    <p>
+                    <a href="ResearchPaper.pdf" class="document" target="_blank">Research Paper
+                    </a><br>
+                    </p>
+                    <p>
+                    <figure>
+                        <img src="resources/img/research_demo.png" alt="Graph.jpg" >
+                        <figcaption>Exercise boundaries for a long-maturity put option</figcaption>
+                    </figure>
+                    </p>
+                    <p class="main-text"></p>
+                <h2>2018 Stock Market Tracking</h2>
+                    <p class="main-text">
+                        Before coming to CMU, I built an Excel Spreadsheet that could provide real-time alerts to price fluctuations, similar to the push notifications that Robinhood sends to your phone. The main difference is that with Robinhood, you see the price movement but you cannot manipulate the data, for instance put it in a chart or record it in a specific table. My spreadsheet uses Excel's <em>Get and Transform</em> Tool (previously known as <em>Power Query</em>) to periodically grab tables of data from a Google Sheet. Upon every refresh, the Google Sheet contained up-to-date information thanks to Google Finance. Lastly, I used VBA scripts to automate the routine information processing. 
+                    </p>
+                    <a href="https://docs.google.com/spreadsheets/d/1wcJfpGnX95gOBO-mGtQx5p5X8kMYw6gHZNA9gYR6JeA/" class="document" target="_blank">Link to Online Google Sheet</a>
+                    <p>
+                    <figure>
+                        <img src="resources/img/investing_demo.png" alt="Power Query.jpg" >
+                        <figcaption>Example of Power Query Connection</figcaption>
+                    </figure>
+                    </p>
+                    <p class="main-text"></p>
+            </div>
+            <div class="right">
+                <nav>
+                    <ul>
+                        <li class="spec"> <a class="btn rest" href="about.html">
+                            About</a>
+                        </li>
+                        <li class="spec"> <a class="btn rest" href="academics.html">
+                            Academics</a>
+                        </li>
+                        <li class="spec"> <a class="btn active" href="projects.html">
+                            Projects</a>
+                        </li>
+                        <li class="spec"> <a class="btn rest" href="travels.html">
+                            Travels </a>
+                        </li>
+                        <li class= "spec chinese"> <a class="btn rest" href="chinese.html">
+                            中文 </a>
+                        </li>
+                    </ul>
+                    <br><a class="btn teaser" href="index.html"><br><em>Back to homepage</em></a>
+                </nav>
+            </div>
+            <div class="clearfix"></div>
+            <div class="footer">
+                <p>Follow me on:</p>
+                <a href ="http://www.facebook.com/ZetianKarl" target="_blank"><img src="resources/img/facebook.png" alt="FB link"></a>
+                <a href="resources/img/wechatQR.png" target="_blank"><img src="resources/img/wechat.png" alt="Wechat"></a>
+                <a href="https://www.linkedin.com/in/karl-xiao-2a6791135/" target="_blank"><img src="resources/img/linkedin.png"
+                alt="LinkedIn"></a>
+                <a href ="https://github.com/kxiao1" target="_blank"><img src="resources/img/github.png" alt="GitHub"></a>
+            </div>
+        </div>
+        <script src="button.js"></script>
+    </body>
+</html>
