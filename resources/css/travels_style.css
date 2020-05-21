@@ -25,12 +25,21 @@ body {
     font-family: 'Noto Serif', garamond,serif}
 
 /*    ptserif*/
-.btn:link,.btn:visited,input[type=submit]
+.btn,input[type=submit]
 {
+    max-width: 100%;
     text-decoration: none;
-    font-size:90%;
+    font-size: 24px;
+    font-size: 1.8vw;
 }
-
+a:hover{
+    color:indianred;
+    text-decoration: none
+}
+a {
+    text-decoration: none;
+    color: #112d4e;
+}
 /* Others*/
 h1,h2 {
     color:#3f72af;
@@ -43,13 +52,15 @@ p {margin-bottom: 0;}
 figure {
     display: inline-block;
     margin-left: 0px;
-    margin-bottom: 20px;
 }
-figure figcaption { 
+figure figcaption {
+    margin-top: 5px; 
     text-align: left; 
-    font-size:medium; 
+    font-size:1.2vw; 
     font-family: garamond; 
-    font-style: italic}
+    font-style: italic;
+    line-height: 1.1;
+    height: 3vw;}
 figure img {
     width: 100%; 
     display: block;} 
@@ -68,7 +79,7 @@ figure img {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 1140px;
-    margin: 20px auto 0px auto;
+    margin: 20px auto 10px auto;
 }
 
 .left {
@@ -81,9 +92,8 @@ figure img {
     border-right: 1px solid #888888;
 }
 .right{
-    min-width:25vh;
+    /* min-width:25vh; */
     float:right;
-    height:100%;
     padding-top:10%;
     padding-bottom: 0%;
     background-color: #f4f4f3; 
@@ -118,11 +128,11 @@ ul li a.rest{
     color: #112d4e;
 }
 
-button {
+#header {
     margin-bottom: 20px;
 }
-.row {
-    margin-bottom: 100px;
+#desc {
+    margin-bottom: 50px;
 }
 .teaser {
     /* line-height: 120%; */
@@ -131,8 +141,10 @@ button {
     padding-left: 0;
     display:block;
     text-align: left;
+    font-size:90%;
     /* height:40px; */
 }
+
 .footer {
     grid-column: 1;
     bottom: 0px;
