@@ -6,16 +6,17 @@ txt[0] = String.fromCharCode(8226) +
           String.fromCharCode(8226) +
           " Habitat for Humanity trip to West Palm Beach, FL\n" +
           String.fromCharCode(8658);
-txt[1] = String.fromCharCode(8658) + 
-          "Family trip to the lovely city of Penang! " + 
-          "Too much sumptuous food to post here so check this out...\n" +
+txt[1] = String.fromCharCode(8226) + 
+          " Family trip to the lovely city of Penang! \n" + 
+          String.fromCharCode(8226) +
+          " Too much sumptuous food to post here so check this out...\n" +
           String.fromCharCode(8658);
-txt[2] = String.fromCharCode(8658) + 
-          "Solo trip to Britain (London, Fountains Abbey, " +
+txt[2] = String.fromCharCode(8226) + 
+          " Solo trip to Britain (London, Fountains Abbey, " +
           "Cambridge, Edinburgh) " +
           "and Denmark (Copenhagen, Helsingør).\n" +
-          String.fromCharCode(8658) + 
-          "Check out the Harry Potter Studios just outside London!\n" +
+          String.fromCharCode(8226) + 
+          " Check out the Harry Potter Studios just outside London!\n" +
           String.fromCharCode(8658);
 let link = new Array(len);
 link[0] = "https://www.boqueteoutdooradventures.com/";
@@ -44,7 +45,7 @@ function showText(i) {
   myP.style = "white-space:pre-line";
   myP.style.width = "100%";
   myP.style.fontSize = "120%";
-  myP.style.fontSize = "1.5vw";
+  myP.style.fontSize = "1.3vw";
   // myP.style.height = "10%";
   myP.style.border = "1.5px solid #888888";
   myP.style.borderRadius = "2%";
