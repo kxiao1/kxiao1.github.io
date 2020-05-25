@@ -1,22 +1,26 @@
 const travels = document.querySelectorAll('.btn-outline-dark');
 var len = travels.length;
 let txt = new Array(len);
-txt[0] = String.fromCharCode(8226) +
-    ' Solo trip to Panama (Boquete is highly recommended!)\n' +
+txt[0] = String.fromCharCode(8226) + "\t" +
+         '  Habitat for Humanity trip to West Palm Beach, FL, with ' + 
+         'complementary city sight-seeing\n' +
+         String.fromCharCode(8226) +
+         '  Solo trip to Panama (Panama City and Boquete - I recommend the ' +
+         'following tour agency!)\n' +
+         String.fromCharCode(8627);
+txt[1] =
     String.fromCharCode(8226) +
-    ' Habitat for Humanity trip to West Palm Beach, FL\n' +
-    String.fromCharCode(8658);
-txt[1] = String.fromCharCode(8226) +
-    ' Family trip to the lovely city of Penang! \n' +
+    '  Family trip to the lovely coastal city of Penang \n' +
     String.fromCharCode(8226) +
-    ' Too much sumptuous food to post here so check this out...\n' +
-    String.fromCharCode(8658);
-txt[2] = String.fromCharCode(8226) +
-    ' Solo trip to Britain (London, Fountains Abbey, ' +
-    'Cambridge, Edinburgh) ' +
-    'and Denmark (Copenhagen, Helsingør).\n' + String.fromCharCode(8226) +
-    ' Check out the Harry Potter Studios just outside London!\n' +
-    String.fromCharCode(8658);
+    " Couldn't decide which food pics to post " + 
+    "so you can check them out here:\n" +
+    String.fromCharCode(8627);
+txt[2] =
+    String.fromCharCode(8226) + '  Solo trip to Britain (London, Cambridge, ' +
+    'Fountains Abbey, Edinburgh, Watford) ' +
+    'and Denmark (Copenhagen, Helsingør)\n' + String.fromCharCode(8226) +
+    '  If you love Harry Potter, visit its studios just outside London!\n' +
+    String.fromCharCode(8627);
 let link = new Array(len);
 link[0] = 'https://www.boqueteoutdooradventures.com/';
 link[1] = 'https://girleatworld.net/penang-food-guide/';
@@ -43,7 +47,7 @@ function showText(i) {
   myP.appendChild(a);
   myP.style = 'white-space:pre-line';
   myP.style.width = '100%';
-  myP.style.fontSize = '120%';
+  myP.style.fontSize = '20px';
   myP.style.fontSize = '1.3vw';
   // myP.style.height = "10%";
   myP.style.border = '1.5px solid #888888';
@@ -56,7 +60,6 @@ function showText(i) {
   newdiv.appendChild(myP);
   var mydiv = document.getElementById('desc');
   for (var k = 0; k < len; k++) {
-    console.log(clicked[i]);
     if (clicked[k]) {
       hideText(k);
     }
@@ -77,12 +80,8 @@ function hideText(i) {
 }
 
 for (let i = 0; i < len; i++) {
-  show[i] = function() {
-    showText(i)
-  };
-  hide[i] = function() {
-    hideText(i)
-  }
+  show[i] = function() { showText(i) };
+  hide[i] = function() { hideText(i) }
 }
 
 for (let i = 0; i < len; i++) {
