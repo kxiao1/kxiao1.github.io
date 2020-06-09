@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* background-color: rgb(163, 114, 114); */
+}
+
+.nav-link {
+  color: black;
+}
+.nav-justified .nav-item {
+  background-color: #e9ecef;
+  /* position: fixed;
+    bottom: 0 */
+}
+p {
+  margin-bottom: 0rem;
+  /* float: left; */
+}
+h1 {
+  font-size: 3.5rem;
+}
+#title {
+  font-size: 5rem;
+  color: silver;
+}
+.bold {
+  color: blueviolet;
+}
+img {
+  margin-bottom: 0.5rem;
+}
+.header {
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.space {
+  margin-bottom: 45px;
+}
+.g-icon {
+  margin: 0px;
+  height: 28x;
+  width: 31px;
+}
+.login {
+  padding: 0px;
+  border: 0px;
+  height: 92px;
+  width: 382px;
+  /* background-color: rgb(255, 255, 255);
+  display: inline-flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.54);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.24) 0px 0px 1px 0px;
+  padding: 0px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-family: Roboto, sans-serif; */
+  background: url("signin_light_normal.png");
+}
+.login:hover {
+  background: url("signin_light_focus..png");
+}
+.login:after {
+  background: url("signin_light_pressed.png");
+}
+.center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(background.gif);
+  background-position: center;
+}
