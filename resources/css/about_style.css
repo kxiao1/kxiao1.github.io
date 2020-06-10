@@ -5,6 +5,11 @@
     box-sizing: border-box;
     background-color: #F9F7F7;
 }
+
+.chineseLight {
+    font-family: Noto Sans CJK SC, SimSun;
+    font-weight: 200
+}
 .chinese {
     font-family: Noto Sans CJK SC, SimSun;
     font-weight: 400;
