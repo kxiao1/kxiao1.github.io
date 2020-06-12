@@ -1,31 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">    
-        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/index_style.css">
-        <title>kxiao</title>
-        <meta charset="UTF-8">
-        <meta name="Description" content="Karl Xiao's personal website. CMU CS/CF 2022.">
-    </head>
-    <body>
-        <header>
-            <div class="links">
-                <h1>Karl's Website.</h1>
-                <a class="btn btn-about" href="about.html">About</a>
-                /
-                <a class="btn btn-academics" href="academics.html">Academics</a>
-                /
-                <a class="btn btn-research" href="projects.html">Projects</a>
-                /
-                <a class="btn btn-personal" href="travels.html">Travels</a>
-                /
-                <a class="btn btn-chinese" id="chinese" href="chinese.html">中文
-                </a>
-                
-            </div>
-        </header>
-    </body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="resources/css/index_style.css"
+    />
+    <title>kxiao</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="Description"
+      content="Karl Xiao's personal website. CMU CS/CF 2022."
+    />
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafrex/spa-github-pages
+      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+      // ----------------------------------------------------------------------
+      // This script checks to see if a redirect is present in the query string
+      // and converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search) {
+          var q = {};
+          console.log(l.search);
+          l.search
+            .slice(1)
+            .split('&')
+            .forEach(function(v) {
+              var a = v.split('=');
+              q[a[0]] = a
+                .slice(1)
+                .join('=')
+                .replace(/~and~/g, '&');
+            });
+          console.log(q);
+          const newEntry =
+            l.pathname.slice(0, -1) +
+            (q.p || '') +
+            (q.q ? '?' + q.q : '') +
+            l.hash;
+          console.log(newEntry);
+          if (q.p !== undefined) {
+            window.history.replaceState(null, null, newEntry);
+          }
+        }
+      else {
+        console.log(l);
+      }
+      })(window.location);
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="links">
+        <h1>Karl's Website.</h1>
+        <a class="btn btn-about" href="about.html">About</a>
+        /
+        <a class="btn btn-academics" href="academics.html">Academics</a>
+        /
+        <a class="btn btn-research" href="projects.html">Projects</a>
+        /
+        <a class="btn btn-personal" href="travels.html">Travels</a>
+        /
+        <a class="btn btn-chinese" id="chinese" href="chinese.html">中文 </a>
+      </div>
+    </header>
+  </body>
 </html>
