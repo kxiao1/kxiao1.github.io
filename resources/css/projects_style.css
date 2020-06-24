@@ -152,7 +152,6 @@ ul li a.rest{
     position:sticky;
     bottom: 0px;
     border-top: 1px solid #888888;
-    padding-top: 20px;
     margin: 0 auto;
     min-width: 100%;
     max-height: 20vh;
@@ -160,8 +159,8 @@ ul li a.rest{
     line-height: 150%;
 }
 .footer img {
-    height: 75px;
-    width: 75px;
+    height: 50px;
+    width: 50px;
     display: inline-block;
     text-align: center;
     margin: 0 auto;
