@@ -32,8 +32,8 @@ body {
 input[type="submit"] {
   max-width: 100%;
   text-decoration: none;
-  font-size: 24px;
-  font-size: 1.6vw;
+  font-size: 18px;
+  /* font-size: 110%vw; */
 }
 a:hover {
   color: indianred;
@@ -69,7 +69,7 @@ figure {
 figure figcaption {
   margin-top: 5px;
   text-align: left;
-  font-size: 1.1vw;
+  font-size: medium;
   font-family: garamond;
   font-style: italic;
   line-height: 1.1;
@@ -135,7 +135,7 @@ ul li {
 ul li a.active {
   background-color: #3f72af;
   min-width: 100%;
-  color: #fff;
+  color: #f4f4f3;
 }
 ul li a.rest {
   color: #112d4e;
