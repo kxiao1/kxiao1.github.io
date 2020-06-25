@@ -133,11 +133,13 @@ ul li {
   background-color: #f4f4f3;
   width: 100%;
 }
-
+.spec {
+  background-color: #f4f4f3;
+}
 ul li a.active {
   background: #3f72af;
   min-width: 100%;
-  color: #fff;
+  color: #f4f4f3;
 }
 ul li a.rest {
   color: #112d4e;
