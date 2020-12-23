@@ -1,84 +1,184 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>kxiao - projects</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/projects_style.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="left">
-                <h1>Projects</h1>
-                <p class="date"><em>Last modified: Jun 10, 2020</em></p>
-                <h2>Giphy Search</h2>
-                    <p class="main-text">
-                        At the start of my Summer 2020 internship at <a href="https://career.seagroup.com/" target="_blank">Labs@SEA</a>, I was tasked with implementing a simple gif fetch webapp using Javascript libraries. This personal project served to familiarise me with ReactJS and hone my front-end development skills. It goes without saying that I put in way more effort on that small app than I did for this static website. Note that the original project specification mandated a Google OAuth feature, which I have kept for sake of completeness. However, there is no server or localstorage to store personal information. You can view the app <a href="https://kxiao.net/giphy-search" target="_blank">here</a>.</p>
-                <h2>Research Project in Computational Finance</h2>
-                    <p class="main-text">
-                        In June and July 2019, my team of four conducted an interesting theoretical study on FOREX options in a perpetual-time setting. With typical, finite-time American call options, for instance, one will not exercise them early when the prevailing domestic interest rate is positive. But in the FOREX case, a delay in exercising means losing out on the quote currency's interest rate. Suppose further that one is given unlimited time to make up his mind. How then to proceed? We determine criteria for optimally exercising perpetual FOREX options - the exercise threshold would be some "stock price" (to be precise, some exchange rate) and the value of the option itself is some function of the underlying price. These would depend only on domestic and foreign interest rate environments, and on volatility assumptions. Using mathematical reasoning and numerical simulation, we obtained various results which can be seen as generalization of their finite, long-maturity corollaries. Please find a working paper on the topic below:
-                    </p>
-                    <p>
-                    <a href="Working Paper.pdf" class="document" target="_blank">Working Paper (updated 2020)
-                    </a><br>
-                    </p>
-                    <p>
-                    <figure>
-                        <img src="resources/img/research_demo.png" alt="Graph.jpg" >
-                        <figcaption>Pricing of a Perpetual Straddle Option</figcaption>
-                    </figure>
-                    </p>
-                    <p class="main-text"></p>
-                <h2>2018 Stock Market Tracking</h2>
-                    <p class="main-text">
-                        Before coming to CMU, I built an Excel Spreadsheet that could provide real-time alerts to price fluctuations, similar to the push notifications that Robinhood sends to your phone. The main difference is that with Robinhood, you see the price movement but you cannot manipulate the data, for instance put it in a chart or record it in a specific table. My spreadsheet uses Excel's <em>Get and Transform</em> Tool (previously known as <em>Power Query</em>) to periodically grab tables of data from a Google Sheet. Upon every refresh, the Google Sheet contained up-to-date information thanks to Google Finance. Lastly, I used VBA scripts to automate the routine information processing.
-                    </p>
-                    <a href="https://docs.google.com/spreadsheets/d/1wcJfpGnX95gOBO-mGtQx5p5X8kMYw6gHZNA9gYR6JeA/" class="document" target="_blank">Link to Online Google Sheet</a>
-                    <p>
-                    <figure>
-                        <img src="resources/img/investing_demo.png" alt="Power Query.jpg" >
-                        <figcaption>Example of Power Query Connection</figcaption>
-                    </figure>
-                    </p>
-                    <p class="main-text"></p>
-            </div>
-            <div class="right">
-                <nav>
-                    <ul>
-                        <li class="spec"> <a class="btn rest" href="about.html">
-                            About</a>
-                        </li>
-                        <li class="spec"> <a class="btn rest" href="academics.html">
-                            Academics</a>
-                        </li>
-                        <li class="spec"> <a class="btn active" href="projects.html">
-                            Projects</a>
-                        </li>
-                        <li class="spec"> <a class="btn rest" href="travels.html">
-                            Travels </a>
-                        </li>
-                        <li class= "spec chinese"> <a class="btn rest" href="chinese.html">
-                            中文 </a>
-                        </li>
-                    </ul>
-                    <br><a class="btn teaser" href="."><br><em>Back to homepage</em></a>
-                </nav>
-            </div>
-            <div class="clearfix"></div>
-            <div class="footer">
-                <p>Follow me on:</p>
-                <a href ="http://www.facebook.com/ZetianKarl" target="_blank"><img src="resources/img/facebook.png" alt="FB link"></a>
-                <a href="resources/img/wechatQR.png" target="_blank"><img src="resources/img/wechat.png" alt="Wechat"></a>
-                <a href="https://www.linkedin.com/in/kxiao1/" target="_blank"><img src="resources/img/linkedin.png"
-                alt="LinkedIn"></a>
-                <a href ="https://github.com/kxiao1" target="_blank"><img src="resources/img/github.png" alt="GitHub"></a>
-            </div>
+<head>
+    <title>kxiao - projects</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css"
+        href="resources/css/projects_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap"
+        rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Projects</h1>
+            <p class="date"><em>Last modified: Dec 22, 2020</em></p>
+            <h2>Visual Question Answering (Fall 2020)</h2>
+            <p class="main-text">
+                Imagine that you are visually impaired and can't really discern
+                the expiry date of your bread, or more annoyingly the card
+                number on your new credit card. Over the past few years, large
+                strides have been made in Visual Question Answering (VQA) such
+                that a blind person can take a picture of their surroundings,
+                ask a question, upload them, and have a machine analyze the
+                image for an apposite answer. This task is difficult because we
+                must deal with poor-quality images and often inconsistent
+                human-annotated training examples. Nonetheless, we built on a 
+                successful Attention-based CNN baseline using image augmentation, 
+                feature identification, and a refined attention model. Our
+                best-performing model improved accuracy by 3.9% relative to the
+                baseline.
+            </p>
+            <p>
+                <a href="VizWhiz_Project_Report.pdf" class="document"
+                    target="_blank">Project Report
+                </a><br>
+            </p>
+            <p>
+            <figure>
+                <img src="resources/img/vqa_modified_attention.png"
+                    alt="modified_attention.jpg">
+                <figcaption>Our Modified Attention Model</figcaption>
+            </figure>
+            </p>
+            <p class="main-text"></p>
+
+            <h2>Giphy Search (Summer 2020)</h2>
+            <p class="main-text">
+                At the start of my internship at <a
+                    href="https://career.seagroup.com/"
+                    target="_blank">Labs@SEA</a>, I was tasked with implementing
+                a simple gif-fetching webapp using Javascript libraries. This
+                personal project served to familiarize me with ReactJS and hone
+                my front-end development skills. It goes without saying that I
+                put in way more effort on that small ReactJS app than I did for
+                this static website. I opted to model my app after Instagram, so
+                you see three columns of results, heart shapes etc. I still had
+                several design choices to make, such as how quickly the search
+                results changed as you typed. Note that the original project
+                specification mandated a Google OAuth feature, which I have
+                preserved for sake of completeness. However, there is no server
+                or localstorage to store personal information. You can view the
+                app <a href="https://kxiao.net/giphy-search"
+                    target="_blank">here</a>.</p>
+            <p>
+            <figure>
+                <img src="resources/img/giphy_demo.gif"
+                    alt="giphy_demo.gif">
+                <figcaption>App Walkthrough</figcaption>
+            </figure>
+            </p>
+            <p class="main-text"></p>
+            
+            <h2>Forex Options Research Project (Summer 2019)</h2>
+            <p class="main-text">
+                We conducted an interesting study of FOREX options in perpetual
+                time. With finite-time American call options, for instance,
+                one will not exercise them early when the prevailing domestic
+                interest rate \(r_d\) is positive. But in the FOREX case, a
+                delay in exercising means losing out on the foreign currency's
+                interest rate \(r_f\). Suppose further that one is given
+                unlimited time to make up his mind. How then to proceed? We
+                determine criteria for optimally exercising perpetual FOREX
+                options - this exercise threshold would be some "stock price"
+                (to be precise, some exchange rate) and we can plot the option's
+                price \(V(S)\) against the underlying price. Complementing the
+                stationary Black-Scholes ODE
+                \(\frac{1}{2}\sigma^2S^2\frac{d^2V}{d^2S} +
+                (r_d - r_f) S \frac{dV}{dS} - r_d V(s) = 0\) with
+                extensive numerical simulation, we obtained various results
+                which can be seen as generalizations of their finite,
+                long-maturity corollaries. Please find a working paper on the
+                topic below:
+            </p>
+            <p>
+                <a href="FX_WorkingPaper.pdf" class="document"
+                    target="_blank">Working Paper (updated 2020)
+                </a><br>
+            </p>
+            <p>
+            <figure>
+                <img src="resources/img/research_demo.png" alt="Graph.jpg">
+                <figcaption>Pricing of a Perpetual Straddle Option</figcaption>
+            </figure>
+            </p>
+            <p class="main-text"></p>
+            <h2>Stock Market Tracking (Summer 2018)</h2>
+            <p class="main-text">
+                Before coming to CMU, I built an Excel Spreadsheet that could
+                provide real-time alerts to price fluctuations, similar to the
+                push notifications that Robinhood sends to your phone. The main
+                difference is that with Robinhood, you see the price movement
+                but you cannot manipulate the data, for instance put it in a
+                chart or record it in a specific table. My spreadsheet uses
+                Excel's <em>Get and Transform</em> Tool (previously known as
+                <em>Power Query</em>) to periodically grab tables of data from a
+                Google Sheet. Upon every refresh, the Google Sheet contained
+                up-to-date information thanks to Google Finance. Lastly, I used
+                VBA scripts to automate the routine information processing.
+            </p>
+            <a href="https://docs.google.com/spreadsheets/d/1wcJfpGnX95gOBO-mGtQx5p5X8kMYw6gHZNA9gYR6JeA/"
+                class="document" target="_blank">Link to Online Google Sheet</a>
+            <p>
+            <figure>
+                <img src="resources/img/investing_demo.png"
+                    alt="Power Query.jpg">
+                <figcaption>Example of Power Query Connection</figcaption>
+            </figure>
+            </p>
+            <p class="main-text"></p>
         </div>
-        <script src="button.js"></script>
-    </body>
+        <div class="right">
+            <nav>
+                <ul>
+                    <li class="spec"> <a class="btn rest" href="about.html">
+                            About</a>
+                    </li>
+                    <li class="spec"> <a class="btn rest" href="academics.html">
+                            Academics</a>
+                    </li>
+                    <li class="spec"> <a class="btn active"
+                            href="projects.html">
+                            Projects</a>
+                    </li>
+                    <li class="spec"> <a class="btn rest" href="travels.html">
+                            Travels </a>
+                    </li>
+                    <li class="spec chinese"> <a class="btn rest"
+                            href="chinese.html">
+                            中文 </a>
+                    </li>
+                </ul>
+                <br><a class="btn teaser" href="."><br><em>Back to
+                        homepage</em></a>
+            </nav>
+        </div>
+        <div class="clearfix"></div>
+        <div class="footer">
+            <p>Follow me on:</p>
+            <a href="http://www.facebook.com/ZetianKarl" target="_blank"><img
+                    src="resources/img/facebook.png" alt="FB link"></a>
+            <a href="resources/img/wechatQR.png" target="_blank"><img
+                    src="resources/img/wechat.png" alt="Wechat"></a>
+            <a href="https://www.linkedin.com/in/kxiao1/" target="_blank"><img
+                    src="resources/img/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://github.com/kxiao1" target="_blank"><img
+                    src="resources/img/github.png" alt="GitHub"></a>
+        </div>
+    </div>
+    <script src="button.js"></script>
+</body>
+
 </html>
