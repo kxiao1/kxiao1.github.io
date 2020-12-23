@@ -74,7 +74,7 @@ figure {
 figure figcaption {
   text-align: left;
   font-size: medium;
-  font-family: garamond;
+  /* font-family: garamond; */
   font-style: italic;
 }
 figure img {
@@ -83,9 +83,8 @@ figure img {
 }
 
 .main-text {
-  text-align: justify;
   margin-bottom: 20px;
-  line-height: 120%;
+  line-height: 130%;
 }
 .class {
   font-size: 16px;
