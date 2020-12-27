@@ -1,0 +1,65 @@
+/* overrides common.css and bootstrap*/
+
+body {
+  background-color: #f9f7f7;
+}
+p {
+  margin-bottom: 0px;
+}
+/*    ptserif*/
+.btn,
+input[type="submit"] {
+  width: 100%;
+  text-decoration: none;
+  font-size: 125%;
+  /* font-size: 110%vw; */
+}
+a:hover {
+  color: indianred;
+  text-decoration: none;
+}
+figure {
+  display: inline-block;
+  margin-left: 0px;
+}
+figure figcaption {
+  margin-top: 5px;
+  text-align: left;
+  font-size: medium;
+  /* font-family: garamond; */
+  font-style: italic;
+  line-height: 1.1;
+  height: 3vw;
+}
+figure img {
+  width: 100%;
+  display: block;
+}
+.jumbotron {
+  background-color: #f9f7f7 !important;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+ul {
+  font-size: 100%;
+}
+#header {
+  margin-bottom: 20px;
+}
+#desc {
+  margin-bottom: 100px;
+}
+.teaser {
+  padding-left: 0;
+  text-align: left;
+  font-size: 90%;
+  /* height:40px; */
+}
+.home {
+  width: 95%;
+}

@@ -1,4 +1,4 @@
-const links = document.querySelectorAll('.btn:not(.teaser)');
+const links = document.querySelectorAll('.btn:not(.teaser, .home)');
 const headers = document.querySelectorAll('.btn-outline-dark');
 const llen = links.length;
 const hlen = headers.length;
