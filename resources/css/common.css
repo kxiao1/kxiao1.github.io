@@ -161,6 +161,12 @@ ul li a.rest {
   height: 40px;
 }
 
+.note {
+  font-style: italic;
+  color: indianred;
+  margin: 10px auto 50px;
+}
+
 /* footers */
 .footer {
   background-color: #f9f7f7;
