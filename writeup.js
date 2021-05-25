@@ -1,6 +1,6 @@
 const travels = document.querySelectorAll(".btn-outline-dark");
-const len = travels.length;
-let txt = new Array(len);
+const len = 3;
+const txt = new Array(len);
 txt[0] = [
   "Habitat for Humanity project at West Palm Beach, FL, with sight-seeing trip to Miami afterwards",
   "Solo trip to Panama (Panama City and Boquete) - I recommend the following tour agency:\t",
@@ -13,20 +13,20 @@ txt[2] = [
   "Solo trip to Britain (London, Cambridge, Fountains Abbey, Edinburgh, Watford) and Denmark (Copenhagen, Helsingør)",
   "If you love Harry Potter, visit its studios just outside London!\n",
 ];
-let link = new Array(len);
+const link = new Array(len);
 link[0] = "https://www.boqueteoutdooradventures.com/";
 link[1] = "https://girleatworld.net/penang-food-guide/";
 link[2] = "https://www.wbstudiotour.co.uk/";
-let desc = new Array(len);
+const desc = new Array(len);
 desc[0] = "Boquete Outdoor Adventures";
 desc[1] = "Penang Food Guide";
 desc[2] = "Warner Bros Studio Tour";
-let clicked = new Array(travels.length);
+const clicked = new Array(len);
 clicked[0] = false;
 clicked[1] = false;
 clicked[2] = false;
-let show = new Array(len);
-let hide = new Array(len);
+const show = new Array(len); // array of functions/ listeners
+const hide = new Array(len);
 
 function showText(i) {
   const myP = document.createElement("P");
@@ -42,11 +42,8 @@ function showText(i) {
   a.href = link[i];
   a.target = "_blank";
   a.innerHTML = desc[i];
-  // b = document.createElement('li');
   t.children[t.children.length - 1].appendChild(a);
-  // t.appendChild(b)
   myP.appendChild(t);
-  // myP.appendChild(a);
   myP.style = "white-space:pre-line";
   myP.style.width = "100%";
   myP.style.fontSize = "20px";
@@ -82,12 +79,8 @@ function hideText(i) {
 }
 
 for (let i = 0; i < len; i++) {
-  show[i] = function () {
-    showText(i);
-  };
-  hide[i] = function () {
-    hideText(i);
-  };
+  show[i] = () => showText(i);
+  hide[i] = () => hideText(i);
 }
 
 for (let i = 0; i < len; i++) {

@@ -1,11 +1,12 @@
-const links = document.querySelectorAll('.btn:not(.teaser, .home)');
-const headers = document.querySelectorAll('.btn-outline-dark');
+const links = document.querySelectorAll(".btn:not(.teaser, .home)");
+const headers = document.querySelectorAll(".btn-outline-dark");
 const llen = links.length;
 const hlen = headers.length;
 const active = new Array(hlen);
 
-var oColor = new Array(llen);
-var oText = oColor;
+const oColor = new Array(llen);
+const oText = new Array(llen);
+
 for (let i = 0; i < llen; i++) {
   oColor[i] = links[i].style.backgroundColor;
   oText[i] = links[i].style.color;
@@ -15,8 +16,8 @@ var coloring = new Array(llen);
 var uncoloring = new Array(llen);
 
 function color(b) {
-  b.style.backgroundColor = '#000000';
-  b.style.color = '#f3f3f4';
+  b.style.backgroundColor = "#000000";
+  b.style.color = "#f3f3f4";
 }
 
 function uncolor(b, i) {
@@ -25,39 +26,36 @@ function uncolor(b, i) {
 }
 
 for (let i = 0; i < llen; i++) {
-  links[i].addEventListener(
-      'mouseover', coloring[i] = function() { color(links[i]); }, false);
-  links[i].addEventListener(
-      'mouseout', uncoloring[i] = function() { uncolor(links[i], i); }, false);
+  coloring[i] = () => color(links[i]);
+  uncoloring[i] = () => uncolor(links[i], i);
+  links[i].addEventListener("mouseover", coloring[i], false);
+  links[i].addEventListener("mouseout", uncoloring[i], false);
 }
 
 function bigFunction(k) {
   currButton = headers[k];
   console.log(active[k]);
   if (active[k]) {
-    currButton.addEventListener('mouseover', coloring[k]);
-    currButton.addEventListener('mouseout', uncoloring[k]);
+    currButton.addEventListener("mouseover", coloring[k], false);
+    currButton.addEventListener("mouseout", uncoloring[k], false);
     uncolor(headers[k], k);
-    active[k] = false;
   } else {
-    currButton.removeEventListener('mouseover', coloring[k]);
-    currButton.removeEventListener('mouseout', uncoloring[k]);
+    currButton.removeEventListener("mouseover", coloring[k], false);
+    currButton.removeEventListener("mouseout", uncoloring[k], false);
     color(headers[k]);
-    active[k] = true;
   }
+  active[k] = !active[k];
   for (let i = 0; i < hlen; i++) {
-    if (i != k) {
-      if (active[i]) {
-        headers[i].addEventListener('mouseover', coloring[i]);
-        headers[i].addEventListener('mouseout', uncoloring[i]);
-        uncolor(headers[i], i);
-        active[i] = false;
-      }
+    if (i != k && active[i]) {
+      headers[i].addEventListener("mouseover", coloring[i], false);
+      headers[i].addEventListener("mouseout", uncoloring[i], false);
+      uncolor(headers[i], i);
+      active[i] = false;
     }
   }
 }
 
 for (let i = 0; i < hlen; i++) {
   active[i] = false; // initially all unactive
-  headers[i].addEventListener('click', function() { bigFunction(i); }, false);
+  headers[i].addEventListener("click", () => bigFunction(i), false);
 }

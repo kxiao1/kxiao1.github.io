@@ -1,1 +1,6 @@
 fullsize/
+
+# irritating stuff
+*:Zone.Identifier
+
+logs.txt

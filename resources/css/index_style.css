@@ -38,6 +38,17 @@ header {
     transform: translateY(0);
   }
 }
+@keyframes appear {
+  0% {
+    visibility: hidden;
+    /* display: none; */
+    /* color: blue; */
+  }
+  100% {
+    display: none;
+    visibility: visible;
+  }
+}
 .links {
   position: absolute;
   max-width: 1140px;
@@ -48,18 +59,22 @@ header {
 }
 .links > a,
 .links > span {
-  animation: 1s ease-out 0s 1 slideUpFromBottom;
+  animation: 0.5s step-end appear, 1s ease-out 0.5s 1 slideUpFromBottom;
 }
+
 .divider {
   white-space: pre-wrap;
   font-size: 160%;
   display: inline-block;
 }
+
 h1 {
   font-size: 300%;
   font-weight: 300;
   color: #f9f7f7;
+  animation: 0.5s step-end appear;
 }
+
 .btn,
 .btn-chinese {
   text-decoration: none;
