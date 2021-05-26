@@ -1,6 +1,9 @@
+# to save space
 fullsize/
 
 # irritating stuff
 *:Zone.Identifier
+.vscode/
 
+# when commit messages get too long
 logs.txt
