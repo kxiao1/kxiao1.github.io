@@ -38,7 +38,7 @@ figure img {
 .jumbotron {
   background-color: #f9f7f7 !important;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0;
 }
 
 .container {
@@ -62,4 +62,7 @@ ul {
 }
 .home {
   width: 95%;
+}
+#notice {
+  padding: 1em 0;
 }
