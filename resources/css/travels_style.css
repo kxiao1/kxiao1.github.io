@@ -6,7 +6,11 @@ body {
 p {
   margin-bottom: 0px;
 }
-/*    ptserif*/
+
+table {
+  border-collapse: separate;
+}
+
 .btn,
 input[type="submit"] {
   width: 100%;
@@ -60,8 +64,8 @@ ul {
   font-size: 90%;
   /* height:40px; */
 }
-.home {
-  width: 95%;
+.gap {
+  margin: 20px auto;
 }
 #notice {
   padding: 1em 0;
